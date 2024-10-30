@@ -1,7 +1,183 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
+<head>
+    <style>/* Stili di base */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        a {
+          color: #aabbff;
+          font-size: 1.1rem;
+          text-decoration: underline;
+        }
+        
+        body {
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+          color: #fff;
+          background-color: #19222e;
+        }
+        
+        h1, h2 {
+          text-align: center;
+          margin-bottom: 1rem;
+        }
+        
+        p {
+          text-align: center;
+        }
+        
+        /* Header */
+        .header {
+            margin-top: 1rem;
+            border-radius: 12px;
+          background-color: #1f2937;
+          color: #fff;
+          padding: 1.5rem;
+        }
+        
+        /* Sezione Video */
+.videos {
+  padding: 1rem;
+}
+
+.video-container {
+  display: grid;
+  gap: 1rem;
+}
+
+.video-container iframe {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  border-color: transparent;
+  aspect-ratio: 16/9; /* Mantiene il rapporto 16:9 */
+  border-radius: 12px;
+}
+
+/* Layout a due colonne su schermi più grandi */
+@media (min-width: 768px) {
+  .video-container {
+    grid-template-columns: repeat(2, 1fr); /* Due colonne per tablet e desktop */
+  }
+}
+
+@media (min-width: 1200px) {
+  .video-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adattamento dinamico su desktop larghi */
+  }
+}
+
+
+        
+        /* Sezione Immagini */
+    .images {
+      padding: 1rem;
+    }
+
+    .image-container {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover; /* Mantiene l'aspetto senza distorsioni */
+    }
+
+    /* Griglia adattiva */
+    @media (min-width: 768px) {
+      .image-container {
+        grid-template-columns: repeat(2, 1fr); /* Due colonne su tablet e desktop */
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .image-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adatta dinamicamente per schermi molto grandi */
+      }
+    }
+
+
+        
+        /* Sezione Contatti */
+        .contact {
+            margin-bottom: 1rem;
+            border-radius: 12px;
+          background-color: #1f2937;
+          color: #fff;
+          padding: 1.5rem;
+          text-align: center;
+        }
+        
+        /* Responsive */
+        @media (min-width: 768px) {
+          .video-container {
+            flex-direction: row;
+            justify-content: center;
+          }
+        }
+        
+    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piereligio Mods gallery</title>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+  <!-- Header con titolo e descrizione -->
+  <header class="header">
+    <h1>Piereligio Mods</h1>
+    <p style="margin-bottom: 1rem;">A very temporary gallery of my work on Assetto Corsa.</p>
+    <p><a href="https://mods.piereligio.com">Main website: mods.piereligio.com</a></p>
+    <p><a href="mailto:info@mods.piereligio.com">Email: info@mods.piereligio.com</a></p>
+    <p><a href="https://instagram.com/piereligio.mods">Instagram: piereligio.mods</a></p>
+  </header>
+
+  <!-- Sezione Video -->
+  <section class="videos">
+    <h2>Videos</h2>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/chzRiiCpx1k?si=bQ6NY80D9NGAMJYb" title="Video 1"></iframe>
+      <iframe src="https://www.youtube.com/embed/JUXkwhE9D64?si=YI57KUVp-lmNIuld&amp;start=4703" title="Video 2"></iframe>
+      <iframe src="https://www.youtube.com/embed/C7FStR6J0uY?si=pT74WscwrTE17qYB" title="Video 3"></iframe>
+      <iframe src="https://www.youtube.com/embed/PIjoyaDJ_gc?si=daPCD2XcnoTOfy_e" title="Video 4"></iframe>
+      <iframe src="https://www.youtube.com/embed/aeRYF-qK9NA?si=sOLKVOTc2Ryyx4z-" title="Video 5"></iframe>
+    </div>
+  </section>
+
+  <!-- Sezione Immagini -->
+  <section class="images">
+    <h2>Images</h2>
+    <div class="image-container">
+      <img src="https://mods.piereligio.com/_next/image?url=http%3A%2F%2Flocalhost%3A9000%2Fuploads%2F1703799057308-Screenshot_piereligio_sodi_sr4_outdoor_gx390_ca_sandown_park_daytona_2023-12-28-19-21-0.jpg&w=1920&q=75" alt="Immagine 1">
+      <img src="https://mods.piereligio.com/_next/image?url=http%3A%2F%2Flocalhost%3A9000%2Fuploads%2F1703807019590-Screenshot_piereligio_sodi_sr4_outdoor_gx390_wackersdorf_karting_2023-12-28-23-6-31.jpg&w=1920&q=75" alt="Immagine 2">
+      <img src="https://www.dropbox.com/scl/fi/vt9w5b14av61are04yx61/Screenshot-2024-10-30-162743.png?rlkey=n3irrjfe0mfe922x1tyydyp94&st=tsurgiyf&raw=1" alt="Immagine 3">
+      <img src="https://mods.piereligio.com/_next/image?url=http%3A%2F%2Flocalhost%3A9000%2Fuploads%2F1703807019590-23-07-10%2013-14-23%205079.png&w=1920&q=75" alt="Immagine 4">
+      <img src="https://mods.piereligio.com/_next/image?url=http%3A%2F%2Flocalhost%3A9000%2Fuploads%2F1703807019590-image.png&w=1920&q=75" alt="Immagine 5">
+      <img src="https://mods.piereligio.com/_next/image?url=http%3A%2F%2Flocalhost%3A9000%2Fuploads%2F1703807019590-23-07-10%2013-14-29%205080.png&w=1920&q=75" alt="Immagine 6">
+    </div>
+  </section>
+
+  <!-- Sezione altre mod video -->
+  <section class="videos">
+    <h2>Older mods</h2>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/IsfUkgIhzuI?si=ObpeI-ug1mZtARZd" title="Video 1"></iframe>
+      <iframe src="https://www.youtube.com/embed/R9aOGoyXMS8?si=6pysa30chCGzyZXK" title="Video 2"></iframe>
+    </div>
+  </section>
+
+  <!-- Sezione Contatti -->
+  <section class="contact">
+    <h2>Contacts</h2>
+    <p><a href="mailto:info@mods.piereligio.com">Email: info@mods.piereligio.com</a></p>
+  </section>
+
 </body>
 </html>
